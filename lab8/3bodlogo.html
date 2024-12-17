@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodlogo3</title>
+</head>
+<body>
+    <h1>Bodlogo3</h1>
+    <script>
+        var x = window.prompt("Tootoo oruulna uu");
+        var y = parseInt(x);
+
+        const floors = 9;        
+        const entrances = 3;   
+        const door = 4;          
+
+        var negentrance = floors * door; 
+
+        var entranceNumber = Math.ceil(y / negentrance);
+        var remainingAfterEntrance = y % negentrance === 0 ? negentrance : y % negentrance;
+
+        var floorNumber = Math.ceil(remainingAfterEntrance / door);
+        var doorNumber = remainingAfterEntrance % door === 0 ? door : remainingAfterEntrance % door;
+
+        document.writeln(`${y} toot ni ${entranceNumber}-r ortsnii ${floorNumber}-r davhriin, ${doorNumber}-r haalga bn.`);
+    </script>
+</body>
+</html>

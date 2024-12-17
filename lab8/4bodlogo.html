@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodlogo4</title>
+</head>
+<body>
+    <h1>5 toonii hamgiin baga huwaagdagchiig oloh</h1>
+    <script>
+        function gcd(a, b) {
+            return b === 0 ? a : gcd(b, a % b);
+        }
+
+        function lcm(a, b) {
+            return (a * b) / gcd(a, b);
+        }
+
+        function findLCM(numbers) {
+            return numbers.reduce((accumulator, currentValue) => lcm(accumulator, currentValue));
+        }
+
+        const numbers = [2, 3, 2, 6, 2];
+        const lcmResult = findLCM(numbers);
+        document.writeln(`${numbers} toonuudiin hamgiin baga huwaagdagch : ${lcmResult}`);
+    </script>
+</body>
+</html>
